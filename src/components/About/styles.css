@@ -1,0 +1,194 @@
+.about-section {
+  padding: 100px 10vw;
+  background: transparent;
+  color: var(--text);
+  font-family: "Geist Mono", monospace;
+}
+
+.section-tag {
+  color: var(--green);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  margin-bottom: 40px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.terminal-body h2 {
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin-bottom: 24px;
+  color: var(--text);
+}
+
+.terminal-body p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.dot.red { background: #ff4f43; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #27c93f; }
+
+.metric {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed var(--border-subtle);
+  padding-bottom: 8px;
+}
+
+.green-txt { color: var(--green); }
+.cyan-txt { color: var(--cyan); }
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pegboard-container {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pegboard {
+  position: relative;
+  width: 320px;
+  height: 360px;
+}
+
+.mini-polaroid {
+  position: absolute;
+  width: 140px;
+  background: #fdfdfd;
+  padding: 8px 8px 16px 8px;
+  border-radius: 2px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  transform: rotate(var(--rot));
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  user-select: none;
+}
+
+.mini-polaroid:hover {
+  transform: rotate(0deg) scale(1.05);
+  z-index: 10;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+}
+
+.push-pin {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), inset -1px -1px 2px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.mini-polaroid img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+}
+
+.handwritten-caption {
+  font-family: "Comic Sans MS", "Chalkboard SE", "Caveat", cursive, monospace;
+  font-size: 10px;
+  color: #1b1b1b;
+  display: block;
+  text-align: center;
+  margin-top: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.large-polaroid-popup {
+  position: absolute;
+  inset: -20px;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  animation: popIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.large-polaroid-frame {
+  width: 280px;
+  background: #fdfdfd;
+  padding: 14px 14px 28px 14px;
+  border-radius: 4px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85);
+  transform: rotate(0deg);
+}
+
+.large-polaroid-frame img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.large-caption {
+  font-size: 18px;
+  font-weight: bold;
+  color: #111111;
+  display: block;
+  text-align: center;
+  margin-top: 12px;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 900px) {
+  .pegboard-container {
+    height: 320px;
+  }
+  .pegboard {
+    width: 280px;
+    height: 300px;
+  }
+  .mini-polaroid {
+    width: 100px;
+  }
+  .mini-polaroid img {
+    height: 80px;
+  }
+  .large-polaroid-frame {
+    width: 240px;
+  }
+  .large-polaroid-frame img {
+    height: 200px;
+  }
+}
