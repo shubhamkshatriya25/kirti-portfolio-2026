@@ -1,5 +1,32 @@
 const CVEs = [
   {
+    CVENumber: "CVE-2023-1231",
+    Description: "Inappropriate implementation in Autofill in Google Chrome on Android before 111.0.5563.64 could allow a remote attacker to spoof omnibox contents through a crafted HTML page.",
+    "Vulnerable Product": "Google Chrome on Android before 111.0.5563.64",
+    References: [
+      "https://nvd.nist.gov/vuln/detail/CVE-2023-1231",
+      "https://crbug.com/1274887",
+    ],
+  },
+  {
+    CVENumber: "CVE-2022-46692",
+    Description: "A WebKit logic issue could allow maliciously crafted web content to bypass Same Origin Policy. Apple addressed it with improved state management and credited Kirtikumar Anandrao Ramchandani in its Safari 16.2 security advisory.",
+    "Vulnerable Product": "Apple WebKit; fixed in Safari 16.2 and related Apple updates",
+    References: [
+      "https://support.apple.com/en-us/102799",
+      "https://nvd.nist.gov/vuln/detail/CVE-2022-46692",
+    ],
+  },
+  {
+    CVENumber: "CVE-2022-46695",
+    Description: "A Safari URL-handling spoofing issue could allow a website that frames malicious content to spoof the interface. Apple addressed it with improved input validation and credited Kirtikumar Anandrao Ramchandani in its iOS 16.2 and iPadOS 16.2 security advisory.",
+    "Vulnerable Product": "Apple Safari; fixed in iOS 16.2 and iPadOS 16.2",
+    References: [
+      "https://support.apple.com/en-asia/102807",
+      "https://nvd.nist.gov/vuln/detail/CVE-2022-46695",
+    ],
+  },
+  {
     CVENumber: "CVE-2017-17455",
     Description:
       "Mahara 16.10 before 16.10.7, 17.04 before 17.04.5, and 17.10 before 17.10.2 are vulnerable to being forced, via a man-in-the-middle attack, to interact with Mahara on the HTTP protocol rather than HTTPS even when an SSL certificate is present.",

@@ -2,6 +2,18 @@ import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import './styles.css';
 
+const navLinks = [
+  { href: "#home", label: "HOME" },
+  { href: "#about", label: "ABOUT" },
+  { href: "#skills", label: "SKILLS" },
+  { href: "#portfolio", label: "PORTFOLIO" },
+  { href: "#work", label: "WORK" },
+  { href: "#blogs", label: "BLOGS" },
+  { href: "#cves", label: "CVES" },
+  { href: "#honours", label: "HONOURS" },
+  { href: "#contact", label: "CONTACT" },
+];
+
 export function Header() {
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem("theme") || "dark";
@@ -91,17 +103,6 @@ export function Header() {
     }
     closeNav();
   };
-
-  const navLinks = [
-    { href: "#home", label: "HOME" },
-    { href: "#about", label: "ABOUT" },
-    { href: "#skills", label: "SKILLS" },
-    { href: "#work", label: "WORK" },
-    { href: "#blogs", label: "BLOGS" },
-    { href: "#cves", label: "CVES" },
-    { href: "#honours", label: "HONOURS" },
-    { href: "#contact", label: "CONTACT" },
-  ];
 
   return (
     <>

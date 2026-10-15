@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import { honoursAndRewards } from "../HonoursData";
 import "../styles.css";
 

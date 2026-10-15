@@ -4,6 +4,7 @@ import { CveSection } from "../CVEs/HomeSection";
 import { Hero } from "../Hero";
 import { HonoursSection } from "../Honours/HomeSection";
 import { Skills } from "../Skill";
+import { PortfolioTeaser } from "../Portfolio";
 
 export function Home() {
   return (
@@ -11,6 +12,7 @@ export function Home() {
       <Hero></Hero>
       <About></About>
       <Skills></Skills>
+      <PortfolioTeaser></PortfolioTeaser>
       <CveSection></CveSection>
       <HonoursSection></HonoursSection>
       <Contact></Contact>

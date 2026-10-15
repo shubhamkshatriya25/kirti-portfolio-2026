@@ -1,5 +1,5 @@
-import { useCallback, useMemo, useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useCallback, useRef, useState } from "react";
+import { motion } from "framer-motion";
 import "./styles.css";
 
 const HERO = "I BREAK THINGS SO YOU DON'T HAVE TO.";
@@ -73,10 +73,7 @@ export function Hero() {
     setRun((x) => x + 1);
   };
 
-  const letters = useMemo(
-    () => HERO.split("").map((char, index) => ({ char, index })),
-    [run]
-  );
+  const letters = HERO.split("").map((char, index) => ({ char, index }));
 
   return (
     <main className="hero" onDoubleClick={reset}>
