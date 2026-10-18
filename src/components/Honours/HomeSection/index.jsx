@@ -4,7 +4,7 @@ import { honoursAndRewards } from "../HonoursData";
 import { motion } from "framer-motion";
 import "../styles.css";
 
-export function HonoursSection({ limit = 3 }) {
+export function HonoursSection({ limit = 6 }) {
   const featuredHonours = honoursAndRewards.slice(0, limit);
 
   return (
@@ -36,20 +36,6 @@ export function HonoursSection({ limit = 3 }) {
             {featuredHonours.map((item, index) => (
               <div key={index} className="honour-card">
                 <h3 className="honour-title">{item.name}</h3>
-                <div className="honour-card-header">
-                  {item.link ? (
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="honour-link"
-                    >
-                      View Credential &rarr;
-                    </a>
-                  ) : (
-                    <span className="honour-no-link">[Awarded]</span>
-                  )}
-                </div>
               </div>
             ))}
           </div>

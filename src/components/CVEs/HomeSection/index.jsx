@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { CVEs } from "../CVEsData";
 import "../styles.css";
 
-export function CveSection({ limit = 3 }) {
+export function CveSection({ limit = 6 }) {
   const featuredCVEs = CVEs.slice(0, limit);
 
   return (
@@ -47,14 +47,6 @@ export function CveSection({ limit = 3 }) {
                   <span className="ref-count">
                     {cve.References?.length || 0} References
                   </span>
-                  <a
-                    href={cve.References?.[0] || "#"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="cve-link"
-                  >
-                    View Details &rarr;
-                  </a>
                 </div>
               </div>
             ))}

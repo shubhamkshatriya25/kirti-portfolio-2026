@@ -69,7 +69,6 @@
   flex-direction: column;
   gap: 24px;
   font-size: 13px;
-  font-family: "DM Mono", monospace;
 }
 
 .mobile-nav a {

@@ -84,7 +84,7 @@ export function Hero() {
 
       <section className="hero-content" id="home">
         <div className="hero-copy">
-          <div className="eyebrow"><span className="green">[</span> CYBERSECURITY ENGINEER <span className="green">]</span></div>
+          <div className="eyebrow"><span className="green">[</span> SECURITY RESEARCHER <span className="green">]</span></div>
 
           <h1 aria-label={HERO}>
             {letters.map(({ char, index }) => (
@@ -119,19 +119,13 @@ export function Hero() {
           </div>
           <div className="terminal-body">
             <p><b>&gt; NAME:</b><br />Kirtikumar A.R.</p>
-            <p><b>&gt; SPECIALIZATION:</b><br />Web Security, Penetration Testing,<br />Red Teaming</p>
+            <p><b>&gt; SPECIALIZATION:</b><br />Web Security, Penetration Testing</p>
             <p><b>&gt; EXPERIENCE:</b><br />5+ Years</p>
-            <p><b>&gt; LOCATION:</b><br />Earth 🌐</p>
+            <p><b>&gt; LOCATION:</b><br />Cosmos</p>
             <p><b>&gt; STATUS:</b><br />Hunting Bugs</p>
           </div>
         </motion.aside>
       </section>
-
-      <div className="bottom-ui">
-        <div>
-        </div>
-        <div className="scroll">◉<br /><span>SCROLL DOWN</span><strong>↓</strong></div>
-      </div>
 
       <button className={`reset ${destroyed ? "visible" : ""}`} onClick={reset}>
         [ REBOOT TEXT ]

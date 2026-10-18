@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import './styles.css'
+import './styles.css';
+import moment1 from '../../assets/images/moment1.jpg';
+import moment2 from '../../assets/images/moment2.jpg';
+import moment3 from '../../assets/images/moment3.jpg';
 
 export function About() {
   const [activeImage, setActiveImage] = useState(null);
@@ -8,34 +11,34 @@ export function About() {
   const photos = [
     {
       id: 1,
-      src: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800",
-      alt: "moment",
-      caption: "moment",
+      src: moment1,
+      alt: "Grind",
+      caption: "Grind",
+      pinColor: "#ff3158",
+      rotation: -3,
+      top: "0%",
+      left: "40%",
+    },
+    {
+      id: 2,
+      src: moment2,
+      alt: "Brief",
+      caption: "Brief",
       pinColor: "#00e7ff",
       rotation: 2,
       top: "50%",
       left: "10%",
     },
     {
-      id: 2,
-      src: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?q=80&w=800",
-      alt: "moment",
-      caption: "moment",
+      id: 3,
+      src: moment3,
+      alt: "Acclaim",
+      caption: "Acclaim",
       pinColor: "#ffbd2e",
       rotation: -8,
       top: "50%",
       left: "60%",
-    },
-    {
-      id: 3,
-      src: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800",
-      alt: "moment",
-      caption: "moment",
-      pinColor: "#ff3158",
-      rotation: -3,
-      top: "0%",
-      left: "40%",
-    },
+    }
   ];
 
   const handleMouseEnter = (photo) => {

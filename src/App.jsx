@@ -15,7 +15,7 @@ function App() {
         <div className="scanlines" />
         <div className="noise" />
       </div>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Header></Header>
         <Routes>
           <Route path="/" element={<Home />} />

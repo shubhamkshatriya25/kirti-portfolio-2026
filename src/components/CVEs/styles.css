@@ -310,7 +310,6 @@ details.cve-references > summary {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: "DM Mono", monospace;
   font-size: 13px;
   color: var(--muted);
   transition: color 0.2s ease;
@@ -324,7 +323,6 @@ details.cve-references > summary:hover {
 details.cve-references > summary::before {
   content: "[+]";
   color: var(--green);
-  font-family: "DM Mono", monospace;
   font-weight: bold;
 }
 

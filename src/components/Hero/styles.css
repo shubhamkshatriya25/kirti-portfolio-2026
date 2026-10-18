@@ -154,37 +154,6 @@ h1 {
   bottom: 170px;
   writing-mode: vertical-rl;
 }
-.bottom-ui {
-  position: absolute;
-  left: 30px;
-  right: 30px;
-  bottom: 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  z-index: 5;
-  color: var(--muted);
-  font-size: 10px;
-}
-.bottom-ui > div:first-child {
-  display: grid;
-  gap: 8px;
-}
-.scroll {
-  text-align: center;
-  color: var(--green);
-  line-height: 1.5;
-}
-.scroll span {
-  display: block;
-  font-size: 9px;
-  margin-top: 5px;
-}
-.scroll strong {
-  display: block;
-  font-size: 20px;
-  font-weight: 300;
-}
 
 .reset {
   position: absolute;
